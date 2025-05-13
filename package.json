@@ -1,0 +1,38 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon --inspect src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-sass": "sass --watch src/resources/scss:src/resources/public/css",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "blog",
+    "nodejs"
+  ],
+  "author": "TuanAnh",
+  "license": "ISC",
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 2 --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "description": "create first blog",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.1"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.3",
+    "sass": "^1.86.3"
+  }
+}
