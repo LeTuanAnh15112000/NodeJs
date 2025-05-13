@@ -23,10 +23,10 @@ const result = sass.compile(scssFilename, { style: 'expanded' });
 fs.writeFileSync(cssOutputPath, result.css); // Save the compiled CSS to a file
 
 // Serve static files
-      app.use(express.static(path.join(__dirname, 'resources', 'public')));
+app.use(express.static(path.join(__dirname, 'resources', 'public')));
 
 // Http logger
-        app.use(morgan('combined'));
+app.use(morgan('combined'));
 
 // Template engine setup
 app.engine(
